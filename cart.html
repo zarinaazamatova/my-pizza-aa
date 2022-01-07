@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My cart</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="/cart.style.css">
+</head>
+<body>
+
+
+    <!-- background -->
+     <div class="cart-container">
+     <span><h1>NOTHING BRINGS PEOPLE TOGETHER LIKE A GOOD PIZZA</h1></span> 
+    <!-- <img src="https://jthemes.net/themes/html/testo/files/images/about-02-img.png"> -->
+
+    <!-- order table -->
+     <div class="panel panel-default"> 
+        <!-- Default panel contents -->
+         <div class="panel-heading">Your order</div>
+        <div class="panel-body"></div> 
+         <div class="total"></div>
+      </div>
+
+
+  <!-- client Info-->
+
+  <!-- <div id="summa">Total:<strong> 0$</strong></div> -->
+  <div class="container">
+    <!-- <div id="summa">Сумма:<strong> 0сом</strong></div> -->
+    <p class="required">Fields that must be filled out are marked *</p>
+
+    <div class="first">
+      <label for="name">Name*</label>
+      <input type="text" id="name" />
+    </div>
+    <div class="second">
+      <label for="phone">Phone*</label>
+      <input type="tel" id="phone" placeholder="Your phone number" />
+    </div>
+    <div class="typeOfOrder">
+      <label for="order">Type of Order*</label>
+
+      <span class="radio1">
+        <input type="radio" id="radio" />
+        <label for="delivery">Delivery</label>
+      </span>
+      <span class="radio2">
+        <input type="radio" id="radio2" />
+        <label for="takeAway">Take away</label>
+      </span>
+    </div>
+    <div class="third">
+      <lable for="city">City*</lable>
+      <select id="cities" required>
+        <option value="БИШКЕК">Bishkek</option>
+        <option value="КАНТ">Kant</option>
+        <option value="КАРА-БАЛТА">Kara-Balta</option>
+      </select>
+    </div>
+    <div class="fourth">
+      <label for="street">Street*</label>
+      <select id="streets" required>
+        <option value="10 МКР">10 mkr</option>
+        <option value="11 МКР">11 mkr</option>
+        <option value="11 Ул., Ак-Бата Ж/М">11 st., Ak-Bata dis</option>
+        <option value="11 я ул. Биримдик Кут Ж/М">
+          11 st., Birimdik dis
+        </option>
+        <option value="14 ЛИНИЯ ул">14 st.</option>
+        <option value="15 МКР Улица">15 mkr st</option>
+        <option value="110 Квартал">110 kvartal</option>
+        <option value="10 Ул., Ж/М Арча-Бешик">10 st., Archa-Beshik dis</option>
+      </select>
+    </div>
+    <div class="fifth">
+      <label for="home">Building*</label>
+      <input type="text" id="home" required />
+      <span class="six">
+        <label for="corpus">Housing</label>
+        <input type="text" id="corpus" required />
+      </span>
+    </div>
+
+    <div class="seven">
+      <label for="office">Office*</label>
+      <input type="text" id="office" required />
+      <span class="eight">
+        <label for="entrance">Entrance</label>
+        <input type="text" id="entrance" required />
+      </span>
+      <div class="nine">
+        <label for="floor">Floor*</label>
+        <input type="text" id="floor" required />
+        <span class="ten">
+          <label for="intercom">Intercom</label>
+          <input type="text" id="intercom" required />
+        </span>
+      </div>
+    </div>
+    <div class="eleven">
+      <label for="deliverAfter">Deliver After</label>
+      <select id="hour">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+      </select>
+      <span>hour</span>
+      <span class="twelve">
+        <select id="minute">
+          <option value="5">5</option>
+          <option value="10">10</option>
+          <option value="15">15</option>
+          <option value="20">20</option>
+          <option value="25">25</option>
+          <option value="30">30</option>
+          <option value="35">35</option>
+          <option value="40">40</option>
+          <option value="45">45</option>
+          <option value="50">50</option>
+          <option value="55">55</option>
+        </select>
+        <label for="minutes">min</label>
+      </span>
+    </div>
+    <div class="thirteen">
+      <label for="additionalInfo">Additional Info</label>
+
+      <input type="text" id="info" />
+    </div>
+    <div class="forteen">
+      <label for="paymant">Paymant</label>
+      <select id="payment">
+        <option value="Наличные">Cash</option>
+        <option value="Демирбанк">Card</option>
+      </select>
+    </div>
+    <div class="forteen2">
+      <label for="sum">Sum</label>
+      <input type="text" id="sum" required />
+      <p class="lastP">
+        Please indicate the banknote with which you will pay, so that the courier in advance
+        took change
+      </p>
+    </div>
+    <div class="fifteen">
+      <input type="checkbox" id="agree" required />
+      <label for="agree"
+        > <a href="#" class="agreement"></a> Agree to terms and conditions*</label
+      >
+    </div>
+    <button id="btn">TO ORDER</button>
+  </div>
+
+
+    </div>
+
+<script src="cart.js"></script>
+
+
+  
+
+</body>
+</html>
