@@ -1,14 +1,13 @@
 //model MVC
 
-
+localStorage.clear(); //чистим localStorage
 var pizzaModel = {
     pizza: [], //Храним наши данные с json
     cart: []   // Корзина
 }
 counter = 0;
-//controller
-localStorage.clear(); //чистим localStorage
 
+//controller
 var appHandler = { // Здесь могут храниться все наши event обработчики
     selectOption: function() {
         const filterOption = document.querySelector(".filter-todo") // сортировщик выпадающий
