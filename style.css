@@ -33,7 +33,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 
 html{
-    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: transparent;
 }
 *{
@@ -140,6 +140,18 @@ option{
     display: inline;
     font-weight: bold;
     margin: 0 0 0 50px;
+}
+.card-img-top{
+    width: 100px;
+   -webkit-transition: width 0.5s;
+   -moz-transition: width 0.5s;
+   -o-transition: width 0.5s;
+    transition: width 0.5s;
+    
+}
+.card-img-top:hover{
+    width: 260px;
+
 }
 .card-text-p{
     background-color: var(--brown);
