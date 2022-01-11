@@ -155,7 +155,7 @@ option{
 }
 .card-text-p{
     background-color: var(--brown);
-    width: 100px;
+    width: 90px;
     height: 35px;
     border-radius: 5px;
     text-align:center;

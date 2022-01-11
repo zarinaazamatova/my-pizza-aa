@@ -30,9 +30,7 @@ var appHandler = { // Здесь могут храниться все наши e
       /* const addBtn = do */
       window.addEventListener("click", function(event){
         if(event.target.hasAttribute("btn-to-cart")){ // клик по кнопке add to cart
-            //console.log('click')
-            //находим карточку, куда нажимаем (родителя)
-            const card = event.target.parentElement;
+            const card = event.target.parentElement;//находим карточку, куда нажимаем (родителя)
             const cardP = card.parentElement;
             //console.log(cardP)
             // информация на cart.html
