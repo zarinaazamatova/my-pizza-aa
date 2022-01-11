@@ -2,14 +2,14 @@
 
 localStorage.clear(); //чистим localStorage
 
-var pizzaModel = {
+let pizzaModel = {
     pizza: [], //Храним наши данные с json
     cart: []   // Корзина
 }
 counter = 0;
 
 //controller
-var appHandler = { // Здесь могут храниться все наши event обработчики
+let appHandler = { // Здесь могут храниться все наши event обработчики
     selectOption: function() {
         const filterOption = document.querySelector(".filter-todo") // сортировщик выпадающий
         filterOption.addEventListener("change", function(event) {
@@ -32,7 +32,7 @@ var appHandler = { // Здесь могут храниться все наши e
         if(event.target.hasAttribute("btn-to-cart")){ // клик по кнопке add to cart
             const card = event.target.parentElement;//находим карточку, куда нажимаем (родителя)
             const cardP = card.parentElement;
-            //console.log(cardP)
+           console.log(cardP)
             // информация на cart.html
             const productInfo = { //собираем инфо и записываем в object
               id: cardP.querySelector('.card-img-top').getAttribute('data-id'),
@@ -57,6 +57,7 @@ var appHandler = { // Здесь могут храниться все наши e
       const searchBar  = document.getElementById('pizza-search-name'); // находим элемент input для поиска
       searchBar.addEventListener('input', function(event){ //реагирует на input
         const target = event.target.value.toUpperCase();    // то, что вводим в input
+        //target.style.color = "white"
        // let div = document.querySelectorAll(".pizza-item") // все карточки пицц
        // div.forEach(el => el.innerHTML = ""); 
         let filterPizzaName = pizzaModel.pizza.filter(el => el.title.toUpperCase().includes(target)); // фильтр по наименованию пиццы и вводимых данных
@@ -68,12 +69,12 @@ var appHandler = { // Здесь могут храниться все наши e
   }
 
 // view.displayPizza -- метод хранящий ф-ю выводa в index.html
-var view = {
+let view = {
     displayPizza: function(data) {
         const container = document.querySelector('.menu-showcase');
         container.innerHTML = ""
-        for (var i = 0; i < data.length; i++) {
-            var pizza = data[i]
+        for (let i = 0; i < data.length; i++) {
+            let pizza = data[i]
            container.innerHTML +=  `
            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
                      <div class="thumbnail pizza-item"">
@@ -99,7 +100,7 @@ async function fetchData () {
   try {
     const response = await fetch('https://gist.githubusercontent.com/zarinaazamatova/1f6e0e6fc374985e12cfba715ad8059c/raw/a4c1a3bab7d4194cacb42f2d4c8793f8988ba3d2/pizza-project-team1.json')
     pizzaModel.pizza = await response.json() // Сохраняем дату 
-    view.displayPizza(pizzaModel.pizza)
+    view.displayPizza(pizzaModel.pizza) // вызываем функцию из view
   } catch(e) {
     console.log(e,"er")
   }
