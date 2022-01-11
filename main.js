@@ -1,6 +1,7 @@
 //model MVC
 
 localStorage.clear(); //чистим localStorage
+
 var pizzaModel = {
     pizza: [], //Храним наши данные с json
     cart: []   // Корзина
