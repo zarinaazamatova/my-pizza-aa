@@ -14,29 +14,31 @@
 </head>
 
 <body>  
+    <div class="main">
     <!-- jumbotron -->
 <div class="jumbotron">
-    <div class="jumbotron-text"><h1>PIZZA TIME</h1></div>
+    <div class="jumbotron-text"><h1 class="time">PIZZA TIME</h1></div>
     <div cart-icon class="cart-btn-to-page">
     <a href="/cart.html" target="_blank"><i class="fas fa-shopping-basket fa-3x" style="color:white;"></i>
     <div class="roundpoint">$ 0</div></a></div>
+    <a href="#"><i class="fas fa-adjust fa-3x" style="color:white;"></i></a>
     <div class="select">
         <select name="todos" class="filter-todo">
-            <option value="all" style="font-weight: bold; color: rgb(233, 151, 57)">All</option>
+            <option value="all" style="font-weight: bold; color: rgb(172, 47, 9)">All</option>
             <option value="spicy" style="font-weight: bold; color: rgb(190, 16, 16)">Spicy</option>
             <option value="not spicy" style="font-weight: bold; color: rgb(31, 129, 31)">Not spicy</option>
         </select>
     </div>
-    <input placeholder="Search pizza..." id="pizza-search-name"></input>
+    <input placeholder="Search pizza..." style="font-size: 1.8rem;" id="pizza-search-name"></input>
 </div>
 
-<h1>TRUE ITALIAN FLAVOR</h1>
+<h1 class="h1">TRUE ITALIAN FLAVOR</h1>
 <!-- <span><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem explicabo dignissimos a dolore sequi. Nisi, ad? Natus esse adipisci repellat!</p></span> -->
 <!-- container menu -->
 <div class="container">
     <div class="row menu-showcase"></div>
 </div>
-
+</div>
 <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
 <script src="main.js"></script>
 </body>

@@ -107,10 +107,35 @@ async function fetchData () {
 }
 fetchData()
 
+
+
+
 appHandler.selectOption(); //вызов функции selectOption сортировка выпадающим списком
 appHandler.addPizzaToCart(); //вызов на добавление в корзину
 appHandler.filterInput();
 
-//filterOption.addEventListener("click", filterTodo)
-//document.addEventListener("DOMContentLoaded", getData)
 
+/* ---------------------ночной режим------------------- */
+
+const adjust = document.querySelector('.fa-adjust')
+const main = document.querySelector('.main')
+const jumbotron = document.querySelector('.jumbotron')
+const h1 = document.querySelector(".h1")
+const select = document.querySelector(".filter-todo")
+
+adjust.addEventListener("click", () => {
+  console.log(h1.style.color)
+  
+  if (h1.style.color === 'silver'){
+    select.style.backgroundColor = "orange";
+  main.style.backgroundImage = "url(https://jooinn.com/images/white-11.jpg)";
+  h1.style.color = 'orange';
+  jumbotron.style.backgroundImage = "url(https://jthemes.net/themes/html/testo/files/images/hero-5.jpg)";
+  }
+  else{
+    select.style.backgroundColor = "silver";
+    main.style.backgroundImage = "url(https://jthemes.net/themes/html/testo/assests/images/bg-01.jpg)";
+    h1.style.color = 'silver';
+    jumbotron.style.backgroundImage = "url(https://jthemes.net/themes/html/testo/assests/images/bg-01.jpg)";
+  }
+})
