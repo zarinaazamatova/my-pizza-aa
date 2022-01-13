@@ -98,7 +98,7 @@ let view = {
 //fetchData from json file -- в pizzaModel.pizza храним данные с json
 async function fetchData () {
   try {
-    const response = await fetch('https://gist.githubusercontent.com/zarinaazamatova/1f6e0e6fc374985e12cfba715ad8059c/raw/a4c1a3bab7d4194cacb42f2d4c8793f8988ba3d2/pizza-project-team1.json')
+    const response = await fetch('https://gist.githubusercontent.com/zarinaazamatova/1f6e0e6fc374985e12cfba715ad8059c/raw/b51fff51e21f9f488f357e125d056de768c50862/pizza-project-team1.json')
     pizzaModel.pizza = await response.json() // Сохраняем дату 
     view.displayPizza(pizzaModel.pizza) // вызываем функцию из view
   } catch(e) {
@@ -137,5 +137,18 @@ adjust.addEventListener("click", () => {
     main.style.backgroundImage = "url(https://jthemes.net/themes/html/testo/assests/images/bg-01.jpg)";
     h1.style.color = 'silver';
     jumbotron.style.backgroundImage = "url(https://jthemes.net/themes/html/testo/assests/images/bg-01.jpg)";
+  }
+})
+
+/* ---------------------поиск------------------- */
+
+const search = document.querySelector(".fa-search")
+const searchPizza = document.querySelector("#pizza-search-name")
+
+search.addEventListener("click", ()=>{
+  if (searchPizza.style.visibility === "visible"){
+      searchPizza.style.visibility = "hidden"
+  } else {
+    searchPizza.style.visibility = "visible"
   }
 })

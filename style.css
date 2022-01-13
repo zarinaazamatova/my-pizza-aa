@@ -33,12 +33,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Holtwood+One+SC&display=swap');
 
+
+.hide {
+    opacity: 1;
+    animation-name: a1;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes a1{
+    to {
+          opacity: 0;
+          min-height: 0; 
+          min-width: 0;
+          padding: 0;
+          margin: 0;
+          border: 0;
+    } 
+  }
+  
 *{
     margin: 0;
     padding: 0;
 }
 .main{
-    background-image:url(https://jooinn.com/images/white-11.jpg);
+    background-image:url(https://jthemes.net/themes/html/testo/assests/images/bg-01.jpg);
 }
 .caption{
     background-color: white;
@@ -55,6 +74,9 @@
     -moz-box-shadow: 4px 4px 8px 0px rgba(117, 43, 0, 0.2);
     box-shadow: 4px 4px 8px 0px rgba(117, 43, 0, 0.2);
     cursor: pointer;
+    
+    transform: scale(1.05);
+    box-shadow: 0 0 13px 3px rgb(0 0 0 / 22%);
 }
 .pizza-item:hover .btn-cart{
     -webkit-box-shadow: 4px 4px 8px 0px rgba(117, 43, 0, 0.2);
@@ -65,7 +87,7 @@
 }
 .jumbotron{
     width: 100%;
-    background-image: url(https://jthemes.net/themes/html/testo/files/images/hero-5.jpg);
+    background-image: url(https://jthemes.net/themes/html/testo/assests/images/bg-01.jpg);
     position: sticky;
     top: 0px;
     z-index: 1; 
@@ -86,7 +108,7 @@
     font-family: 'Roboto Condensed', sans-serif;
     text-align: center;
     margin: 70px 0 50px 0;
-    color:orange;
+    color:silver;
     font-weight: bold;
     font-size: 7rem;
 }
@@ -96,7 +118,7 @@ p{
 }
 .select{
     position:absolute;
-    bottom: 20px;
+    bottom: 2px;
     left: 50px;
 }
 .filter-todo{
@@ -105,7 +127,7 @@ p{
     color:var(--brown);
     font-weight: bold;
     opacity: 0.9;
-    background-color: orange;
+    background-color: silver;
     font-size: 1.8rem;
 }
 .container{
@@ -163,8 +185,25 @@ h3{
 .card-text{
     opacity: 0;
 }
+.icons{
+    position: relative;
+}
 .fa-shopping-basket{
-    margin:0px 70px;
+    position: absolute;
+    right: 50px;
+    /* margin:0 70px; */
+    opacity: 0.8;
+}
+.fa-adjust{
+    position: absolute;
+    right: 80px;
+    /*margin:0 20px; */
+    opacity: 0.8;
+}
+.fa-search{
+    position: absolute;
+    right: 110px;/* 
+    margin:0 30px; */
     opacity: 0.8;
 }
 .roundpoint{
@@ -193,7 +232,8 @@ width: 350px;
 opacity: 0.9;
 } */
 #pizza-search-name{
-    display: grid;
+    display: block;
+    visibility: hidden;
     align-items: center;
     margin: 0 40% 10px auto; 
     width: 350px;
@@ -202,6 +242,4 @@ opacity: 0.9;
     background-color: orange;
     /* margin-bottom: 10px; */
 }
-.fa-adjust{
-    opacity: 0.8;
-}
+
