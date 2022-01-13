@@ -6,7 +6,7 @@ let pizzaModel = {
     pizza: [], //Храним наши данные с json
     cart: []   // Корзина
 }
-counter = 0;
+let counter = 0;
 
 //controller
 let appHandler = { // Здесь могут храниться все наши event обработчики
@@ -92,8 +92,6 @@ let view = {
         } 
     }
 }//Метод объекта view
-
-
 
 //fetchData from json file -- в pizzaModel.pizza храним данные с json
 async function fetchData () {
