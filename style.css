@@ -188,6 +188,7 @@ h3{
 .icons{
     position: relative;
 }
+
 .fa-shopping-basket{
     position: absolute;
     right: 50px;
@@ -196,16 +197,28 @@ h3{
 }
 .fa-adjust{
     position: absolute;
-    right: 80px;
+    right: 120px;
     /*margin:0 20px; */
     opacity: 0.8;
 }
 .fa-search{
     position: absolute;
-    right: 110px;/* 
+    right: 190px;/* 
     margin:0 30px; */
     opacity: 0.8;
 }
+
+.back{
+   
+    opacity: 0.8;
+    cursor: pointer;
+    vertical-align: top;
+    
+}
+/* .back{
+    position: relative;
+    margin-top:20px;
+} */
 .roundpoint{
     color: var(--white);
     font-weight: bold;

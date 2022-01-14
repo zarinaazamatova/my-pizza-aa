@@ -150,3 +150,9 @@ search.addEventListener("click", ()=>{
     searchPizza.style.visibility = "visible"
   }
 })
+/* ---------------------icon <= ------------------- */
+/* const back = document.querySelector(".fa-arrow-alt-circle-left")
+
+back.addEventListener("click", ()=>{
+
+}) */
