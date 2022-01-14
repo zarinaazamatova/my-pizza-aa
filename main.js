@@ -52,20 +52,61 @@ let appHandler = { // Здесь могут храниться все наши e
         }
       })
     }, 
+    searchBtn: function(){
+/* ---------------------поиск------------------- */
+
+      const search = document.querySelector(".fa-search")
+      const searchPizza = document.querySelector("#pizza-search-name")
+
+      search.addEventListener("click", ()=>{
+        if (searchPizza.style.visibility === "visible"){
+            searchPizza.style.visibility = "hidden"
+        } else {
+          searchPizza.style.visibility = "visible"
+  }
+})
+    },
     // метод для поиска search input
     filterInput: function(){
       const searchBar  = document.getElementById('pizza-search-name'); // находим элемент input для поиска
       searchBar.addEventListener('input', function(event){ //реагирует на input
         const target = event.target.value.toUpperCase();    // то, что вводим в input
-        //target.style.color = "white"
-       // let div = document.querySelectorAll(".pizza-item") // все карточки пицц
-       // div.forEach(el => el.innerHTML = ""); 
+       // const div = document.querySelectorAll(".pizza-item") // все карточки пицц
+       // div.forEach(el => el= ""); 
         let filterPizzaName = pizzaModel.pizza.filter(el => el.title.toUpperCase().includes(target)); // фильтр по наименованию пиццы и вводимых данных
 
         view.displayPizza(filterPizzaName) // вызов функции с фильтром
       })
 
+    },
+    darkMood: function(){
+/* ---------------------ночной режим------------------- */
+
+        const adjust = document.querySelector('.fa-adjust')
+        const main = document.querySelector('.main')
+        const jumbotron = document.querySelector('.jumbotron')
+        const h1 = document.querySelector(".h1")
+        const select = document.querySelector(".filter-todo")
+
+        adjust.addEventListener("click", () => {
+          console.log(h1.style.color)
+          
+          if (h1.style.color === 'silver'){
+            select.style.backgroundColor = "orange";
+          main.style.backgroundImage = "url(https://jooinn.com/images/white-11.jpg)";
+          h1.style.color = 'orange';
+          jumbotron.style.backgroundImage = "url(https://jthemes.net/themes/html/testo/files/images/hero-5.jpg)";
+          }
+          else{
+            select.style.backgroundColor = "silver";
+            main.style.backgroundImage = "url(https://jthemes.net/themes/html/testo/assests/images/bg-01.jpg)";
+            h1.style.color = 'silver';
+            jumbotron.style.backgroundImage = "url(https://jthemes.net/themes/html/testo/assests/images/bg-01.jpg)";
+          }
+        })
     }
+
+
   }
 
 // view.displayPizza -- метод хранящий ф-ю выводa в index.html
@@ -91,7 +132,7 @@ let view = {
            `
         } 
     }
-}//Метод объекта view
+  }//Метод объекта view
 
 //fetchData from json file -- в pizzaModel.pizza храним данные с json
 async function fetchData () {
@@ -110,49 +151,6 @@ fetchData()
 
 appHandler.selectOption(); //вызов функции selectOption сортировка выпадающим списком
 appHandler.addPizzaToCart(); //вызов на добавление в корзину
-appHandler.filterInput();
-
-
-/* ---------------------ночной режим------------------- */
-
-const adjust = document.querySelector('.fa-adjust')
-const main = document.querySelector('.main')
-const jumbotron = document.querySelector('.jumbotron')
-const h1 = document.querySelector(".h1")
-const select = document.querySelector(".filter-todo")
-
-adjust.addEventListener("click", () => {
-  console.log(h1.style.color)
-  
-  if (h1.style.color === 'silver'){
-    select.style.backgroundColor = "orange";
-  main.style.backgroundImage = "url(https://jooinn.com/images/white-11.jpg)";
-  h1.style.color = 'orange';
-  jumbotron.style.backgroundImage = "url(https://jthemes.net/themes/html/testo/files/images/hero-5.jpg)";
-  }
-  else{
-    select.style.backgroundColor = "silver";
-    main.style.backgroundImage = "url(https://jthemes.net/themes/html/testo/assests/images/bg-01.jpg)";
-    h1.style.color = 'silver';
-    jumbotron.style.backgroundImage = "url(https://jthemes.net/themes/html/testo/assests/images/bg-01.jpg)";
-  }
-})
-
-/* ---------------------поиск------------------- */
-
-const search = document.querySelector(".fa-search")
-const searchPizza = document.querySelector("#pizza-search-name")
-
-search.addEventListener("click", ()=>{
-  if (searchPizza.style.visibility === "visible"){
-      searchPizza.style.visibility = "hidden"
-  } else {
-    searchPizza.style.visibility = "visible"
-  }
-})
-/* ---------------------icon <= ------------------- */
-/* const back = document.querySelector(".fa-arrow-alt-circle-left")
-
-back.addEventListener("click", ()=>{
-
-}) */
+appHandler.filterInput(); //вызов на добавление в корзину
+appHandler.darkMood();  //вызов на добавление в корзину
+appHandler.searchBtn(); //вызов на добавление в корзину
