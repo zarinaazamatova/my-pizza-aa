@@ -1,5 +1,5 @@
 //model MVC
-
+ // model -pizzaModel, view/items - 
 localStorage.clear(); //чистим localStorage
 
 let pizzaModel = {
@@ -32,9 +32,9 @@ let appHandler = { // Здесь могут храниться все наши e
         if(event.target.hasAttribute("btn-to-cart")){ // клик по кнопке add to cart
             const card = event.target.parentElement;//находим карточку, куда нажимаем (родителя)
             const cardP = card.parentElement;
-           console.log(cardP)
+           //console.log(cardP)
             // информация на cart.html
-            const productInfo = { //собираем инфо и записываем в object
+          const productInfo = { //собираем инфо и записываем в object
               id: cardP.querySelector('.card-img-top').getAttribute('data-id'),
               imgSrc: cardP.querySelector('.card-img-top').getAttribute('src'),
               title: cardP.querySelector('.card-img-top').getAttribute('alt'),
